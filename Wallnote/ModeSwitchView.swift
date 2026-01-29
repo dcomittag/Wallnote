@@ -8,37 +8,25 @@
 import SwiftUI
 
 struct ModeSwitchView: View {
-    @AppStorage("isDarkMode") private var isDarkMode = false
-//    @AppStorage("currencySymbolfirst") private var currencySymbolfirst = false
-
-//    @EnvironmentObject var expenseData: ExpenseData
+    @AppStorage("appearanceMode") private var appearanceMode: AppearanceMode = .system
     
     var body: some View {
         VStack {
-            Text("Mode.")
-                .fontWeight(.bold)
-            + Text(" Choose your preferred mode.")
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
-        VStack {
-            Picker("Mode", selection: $isDarkMode) {
-                    Text("Light")
-                        .tag(false)
-                    Text("Dark")
-                        .tag(true)
+            Text("Appearance")
+                .font(.headline)
+            VStack {
+                Picker("Appearance", selection: $appearanceMode) {
+                    ForEach(AppearanceMode.allCases) { mode in
+                        Text(mode.title).tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
             }
-            .pickerStyle(.segmented)
         }
         .padding()
         Spacer()
     }
 }
-
-//func getLocalCurrencySymbol() -> String {
-//    let currencySymbol = Locale.current.currencySymbol ?? "$" // Default to "$" if symbol not found
-//    return currencySymbol
-//}
 
 struct ModeSwitchView_Previews: PreviewProvider {
     static var previews: some View {

@@ -13,35 +13,23 @@ struct WelcomeView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Image("NayacaFaviconTransparentBlack")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-            }
-            .padding()
-            .padding(.top)
             Spacer()
             VStack {
-                Image("WallnoteLogoTransparent")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
                 Text("Welcome to")
-                    .customTitleText()
-
                 Text("Wallnote")
-                    .customTitleText()
+                    .foregroundStyle(Color("Indigo"))
             }
+            .font(.largeTitle)
+            .fontWeight(.black)
             .padding()
+             Spacer()
             
             VStack {
-                Text("Write notes on your wallpaper and never miss a beat")
+                InformationDetailView(title: "Pick a photo.", message: "Choose any picture from your library.")
+                InformationDetailView(title: "Write & style.", message: "Add a note and customize it your way.")
+                InformationDetailView(title: "Set as wallpaper.", message: "Keep your Wallnote in view and never miss a beat.")
             }
-            .multilineTextAlignment(.center)
-            .font(.title)
-            .fontWeight(.bold)
+            .font(.title2)
             .padding()
             
             Spacer()
@@ -50,20 +38,20 @@ struct WelcomeView: View {
                 isFirstLaunch = false
             } label: {
                 ZStack {
-                    Circle().foregroundColor(.black)
+                    Circle()
+                        .stroke(Color("Indigo"), lineWidth: 2)
                     Text("📸")
                         .font(.system(size: buttonEmojiFontSize))
                 }
                 .frame(width: 55, height: 55)
                 .padding()
             }
-            
             .padding()
         }
-        .foregroundColor(.black)
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("Illuminating"))
+        .foregroundStyle(.black)
+        .background(.white)
         .edgesIgnoringSafeArea(.all)
     }
 }

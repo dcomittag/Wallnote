@@ -43,9 +43,9 @@ struct PreView: View {
                         Image(uiImage: image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                            .frame(width: geometry.size.width, height: geometry.size.height)
                             .clipped()
-                            .edgesIgnoringSafeArea(.all)
+                            
                     } else {
                         Text("No Image Selected")
                     }
@@ -63,15 +63,25 @@ struct PreView: View {
                             .frame(width: geometry.size.width-40, height: geometry.size.width-40) // Use the full width for the TextEditor
                             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                     }
-                    
-                    
-                    VStack {
-                        Spacer()
-                        buttonBar
+                    .safeAreaInset(edge: .bottom) {
+                            VStack {
+                                Text("Press the camera button to start over or edit.")
+                                    .multilineTextAlignment(.center)
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                                    .frame(width: geometry.size.width / 2, height: geometry.size.height / 2)
+//                                    .position(x: geometry.size.width * 3 / 4)
+                                buttonBar
+                            }
+                            
+                            
                     }
-                    .padding(.bottom, 50)
+                    
+                    
+//                    .padding(.bottom, 50)
                 }
             }
+            .ignoresSafeArea()
         }
     }
     }

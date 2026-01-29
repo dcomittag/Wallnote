@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9743049E2F10EFC90000AF97 /* InformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9743049D2F10EFC90000AF97 /* InformationDetailView.swift */; };
+		974304B02F160E990000AF97 /* SettingsHeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974304AF2F160E990000AF97 /* SettingsHeadlineView.swift */; };
 		97A1DC262BB6BB5E00DF9274 /* WallnoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC252BB6BB5E00DF9274 /* WallnoteApp.swift */; };
 		97A1DC282BB6BB5E00DF9274 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC272BB6BB5E00DF9274 /* ContentView.swift */; };
 		97A1DC2A2BB6BB5F00DF9274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A1DC292BB6BB5F00DF9274 /* Assets.xcassets */; };
@@ -20,7 +22,7 @@
 		97A1DC562BB6BD1A00DF9274 /* WallnoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC552BB6BD1A00DF9274 /* WallnoteModel.swift */; };
 		97A1DC582BB6BD4300DF9274 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC572BB6BD4300DF9274 /* PhotoPicker.swift */; };
 		97A1DC5A2BB6BD6F00DF9274 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC592BB6BD6F00DF9274 /* ImageStorage.swift */; };
-		97A1DC5C2BB6BD8B00DF9274 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC5B2BB6BD8B00DF9274 /* SocialView.swift */; };
+		97A1DC5C2BB6BD8B00DF9274 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC5B2BB6BD8B00DF9274 /* MoreView.swift */; };
 		97A1DC5E2BB6BDA600DF9274 /* ModeSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC5D2BB6BDA600DF9274 /* ModeSwitchView.swift */; };
 		97A1DC602BB6BDC000DF9274 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC5F2BB6BDC000DF9274 /* SettingsView.swift */; };
 		97A1DC622BB6BDD500DF9274 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC612BB6BDD500DF9274 /* StartView.swift */; };
@@ -31,6 +33,7 @@
 		97A1DC6C2BB6BEEE00DF9274 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC6B2BB6BEEE00DF9274 /* EditorView.swift */; };
 		97A1DC6E2BB6BF1A00DF9274 /* FinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC6D2BB6BF1A00DF9274 /* FinalView.swift */; };
 		97A1DC702BB6BF3500DF9274 /* ScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC6F2BB6BF3500DF9274 /* ScreenshotView.swift */; };
+		97CE7BCB2F2B48D500223681 /* AppearanceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE7BCA2F2B48D500223681 /* AppearanceMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9743049D2F10EFC90000AF97 /* InformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailView.swift; sourceTree = "<group>"; };
+		9743049F2F10F3900000AF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		974304AF2F160E990000AF97 /* SettingsHeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeadlineView.swift; sourceTree = "<group>"; };
 		97A1DC222BB6BB5E00DF9274 /* Wallnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A1DC252BB6BB5E00DF9274 /* WallnoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallnoteApp.swift; sourceTree = "<group>"; };
 		97A1DC272BB6BB5E00DF9274 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,7 +73,7 @@
 		97A1DC552BB6BD1A00DF9274 /* WallnoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallnoteModel.swift; sourceTree = "<group>"; };
 		97A1DC572BB6BD4300DF9274 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		97A1DC592BB6BD6F00DF9274 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
-		97A1DC5B2BB6BD8B00DF9274 /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		97A1DC5B2BB6BD8B00DF9274 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		97A1DC5D2BB6BDA600DF9274 /* ModeSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSwitchView.swift; sourceTree = "<group>"; };
 		97A1DC5F2BB6BDC000DF9274 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		97A1DC612BB6BDD500DF9274 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		97A1DC6B2BB6BEEE00DF9274 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		97A1DC6D2BB6BF1A00DF9274 /* FinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalView.swift; sourceTree = "<group>"; };
 		97A1DC6F2BB6BF3500DF9274 /* ScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotView.swift; sourceTree = "<group>"; };
+		97CE7BCA2F2B48D500223681 /* AppearanceMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,26 +135,30 @@
 		97A1DC242BB6BB5E00DF9274 /* Wallnote */ = {
 			isa = PBXGroup;
 			children = (
+				9743049F2F10F3900000AF97 /* Info.plist */,
+				974304AF2F160E990000AF97 /* SettingsHeadlineView.swift */,
+				9743049D2F10EFC90000AF97 /* InformationDetailView.swift */,
 				97A1DC252BB6BB5E00DF9274 /* WallnoteApp.swift */,
 				97A1DC6B2BB6BEEE00DF9274 /* EditorView.swift */,
 				97A1DC6D2BB6BF1A00DF9274 /* FinalView.swift */,
 				97A1DC6F2BB6BF3500DF9274 /* ScreenshotView.swift */,
 				97A1DC272BB6BB5E00DF9274 /* ContentView.swift */,
 				97A1DC692BB6BE8200DF9274 /* AppState.swift */,
-				97A1DC292BB6BB5F00DF9274 /* Assets.xcassets */,
 				97A1DC4F2BB6BC1E00DF9274 /* Extensions.swift */,
 				97A1DC512BB6BC4600DF9274 /* WelcomeView.swift */,
 				97A1DC552BB6BD1A00DF9274 /* WallnoteModel.swift */,
 				97A1DC572BB6BD4300DF9274 /* PhotoPicker.swift */,
 				97A1DC592BB6BD6F00DF9274 /* ImageStorage.swift */,
-				97A1DC5B2BB6BD8B00DF9274 /* SocialView.swift */,
+				97A1DC5B2BB6BD8B00DF9274 /* MoreView.swift */,
 				97A1DC5D2BB6BDA600DF9274 /* ModeSwitchView.swift */,
+				97CE7BCA2F2B48D500223681 /* AppearanceMode.swift */,
 				97A1DC5F2BB6BDC000DF9274 /* SettingsView.swift */,
 				97A1DC612BB6BDD500DF9274 /* StartView.swift */,
 				97A1DC632BB6BDFA00DF9274 /* SharedSettings.swift */,
 				97A1DC652BB6BE1200DF9274 /* StylingView.swift */,
 				97A1DC672BB6BE2600DF9274 /* PreView.swift */,
 				97A1DC532BB6BCC200DF9274 /* WallnoteViewModel.swift */,
+				97A1DC292BB6BB5F00DF9274 /* Assets.xcassets */,
 				97A1DC2B2BB6BB5F00DF9274 /* Preview Content */,
 			);
 			path = Wallnote;
@@ -320,12 +331,15 @@
 				97A1DC5E2BB6BDA600DF9274 /* ModeSwitchView.swift in Sources */,
 				97A1DC502BB6BC1E00DF9274 /* Extensions.swift in Sources */,
 				97A1DC262BB6BB5E00DF9274 /* WallnoteApp.swift in Sources */,
-				97A1DC5C2BB6BD8B00DF9274 /* SocialView.swift in Sources */,
+				97A1DC5C2BB6BD8B00DF9274 /* MoreView.swift in Sources */,
 				97A1DC6A2BB6BE8200DF9274 /* AppState.swift in Sources */,
 				97A1DC5A2BB6BD6F00DF9274 /* ImageStorage.swift in Sources */,
 				97A1DC522BB6BC4600DF9274 /* WelcomeView.swift in Sources */,
+				97CE7BCB2F2B48D500223681 /* AppearanceMode.swift in Sources */,
 				97A1DC542BB6BCC200DF9274 /* WallnoteViewModel.swift in Sources */,
+				974304B02F160E990000AF97 /* SettingsHeadlineView.swift in Sources */,
 				97A1DC602BB6BDC000DF9274 /* SettingsView.swift in Sources */,
+				9743049E2F10EFC90000AF97 /* InformationDetailView.swift in Sources */,
 				97A1DC6C2BB6BEEE00DF9274 /* EditorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,12 +507,12 @@
 				DEVELOPMENT_TEAM = 3EBKFS4F6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wallnote/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,7 +526,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -527,12 +541,12 @@
 				DEVELOPMENT_TEAM = 3EBKFS4F6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wallnote/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,7 +560,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -37,9 +37,9 @@ struct StylingView: View {
                                 Image(uiImage: image)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                                    .frame(width: geometry.size.width, height: geometry.size.height)
                                     .clipped()
-                                    .edgesIgnoringSafeArea(.all)
+                                    
                             } else {
                                 Text("No Image Selected")
                             }
@@ -90,98 +90,46 @@ struct StylingView: View {
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                 }
                 
-                
-                VStack {
-                    Spacer()
-                    HStack(spacing: 20) {
-                        // Button to pick a new photo
-                        Button { appState.selectedView = .startView } label: {
-                            ZStack {
-                                Circle().foregroundColor(colorScheme == .dark ? .white : .black)
-                                Image(systemName: "photo")
-                                    .foregroundColor(colorScheme == .dark ? .black : .white)
-                                    .font(.system(size: 28)) // Adjust as necessary
-                            }
-                            .frame(width: 55, height: 55)
-                            .padding()
-                        }
-                        
-                            Button {
-                                appState.selectedView = .editorView
-                                
-                            } label: {
+                .safeAreaInset(edge: .bottom) {
+                    VStack {
+                        Spacer()
+                        HStack(spacing: 20) {
+                            // Button to pick a new photo
+                            Button { appState.selectedView = .startView } label: {
                                 ZStack {
                                     Circle().foregroundColor(colorScheme == .dark ? .white : .black)
-                                    Image(systemName: "pencil.and.scribble")
+                                    Image(systemName: "photo")
                                         .foregroundColor(colorScheme == .dark ? .black : .white)
                                         .font(.system(size: 28)) // Adjust as necessary
                                 }
                                 .frame(width: 55, height: 55)
                                 .padding()
                             }
+                            
+                                Button {
+                                    appState.selectedView = .editorView
+                                    
+                                } label: {
+                                    ZStack {
+                                        Circle().foregroundColor(colorScheme == .dark ? .white : .black)
+                                        Image(systemName: "pencil.and.scribble")
+                                            .foregroundColor(colorScheme == .dark ? .black : .white)
+                                            .font(.system(size: 28)) // Adjust as necessary
+                                    }
+                                    .frame(width: 55, height: 55)
+                                    .padding()
+                                }
+                        }
+                        .foregroundColor(.white)
+                        .padding(.horizontal)
+                        .padding(.bottom, 20)
                     }
-                    .foregroundColor(.white)
-                    .padding(.horizontal)
                     .padding(.bottom, 20)
                 }
-                .padding(.bottom, 50)
-//                VStack {
-//                    HStack {
-//                        Button {
-//                            appState.selectedView = .main
-//                        } label: {
-//                            Image(systemName: "photo")
-//                        }
-//                        Button {
-//                            appState.selectedView = .main
-//                        } label: {
-//                            Image(systemName: "pencil.and.scribble")
-//                        }
-//                    }
-//
-//                }
-                    
-                    
                 
-                
-//                VStack {
-//                    Spacer()
-//                    HStack(spacing: 20) {
-//                        // Button to pick a new photo
-//                        Button(action: { isPickerPresented = true }) {
-//                            ZStack {
-////                                Circle().foregroundColor(.black)
-//                                Image(systemName: "photo.badge.plus")
-//                                    .foregroundColor(colorScheme == .dark ? .white : .black)
-//                                    .font(.system(size: 28)) // Adjust as necessary
-//                            }
-//                            .frame(width: 55, height: 55)
-//                            .padding()
-//                        }
-//
-//                        // Button to reuse the selected image (if available)
-//                        if viewModel.selectedImage != nil {
-//                            Button(action: {
-//                                viewModel.saveSelectedImage()
-//                                appState.selectedView = .editingView
-//
-//                            }) {
-//                                ZStack {
-////                                    Circle().foregroundColor(.black)
-//                                    Image(systemName: "photo.badge.checkmark")
-//                                        .foregroundColor(colorScheme == .dark ? .white : .black)
-//                                        .font(.system(size: 28)) // Adjust as necessary
-//                                }
-//                                .frame(width: 55, height: 55)
-//                                .padding()
-//                            }
-//                        }
-//                    }
-//                    .foregroundColor(.white)
-//                    .padding(.horizontal)
-//                    .padding(.bottom, 20)
-//                }
             }
         }
+        .ignoresSafeArea()
     }
 }
+

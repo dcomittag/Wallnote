@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct WallnoteApp: App {
-    @AppStorage("isDarkMode") private var isDarkMode = false
+    @AppStorage("appearanceMode") private var appearanceMode: AppearanceMode = .system
     @StateObject var appState = AppState()
     var sharedSettings = SharedSettings()
     
@@ -19,7 +19,7 @@ struct WallnoteApp: App {
             ContentView()
                 .environmentObject(viewmodel)
                 .environmentObject(appState)
-                .preferredColorScheme(isDarkMode ? .dark : .light)
+                .preferredColorScheme(appearanceMode.colorScheme)
                 .environmentObject(sharedSettings)
         }
     }

@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
+    private var navigationTitleText: String {
+        switch selectedTab {
+        case 0: return "Customize your experience"
+        case 1: return "Don’t be shy"
+        default: return ""
+        }
+    }
     @State private var selectedTab = 0
     
     var body: some View {
@@ -22,17 +28,17 @@ struct SettingsView: View {
             .tag(0)
             
             VStack {
-                SocialView()
+                MoreView()
             }
             .tabItem {
-                Label("Social", systemImage: "person.3")
+                Label("More", systemImage: "ellipsis.circle")
             }
             .tag(1)
         }
-        .accentColor(Color("Illuminating"))
+        .accentColor(Color("Indigo"))
         .foregroundColor(.primary)
         .padding()
-        .navigationTitle("Wallnote")
+        .navigationTitle(navigationTitleText)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {

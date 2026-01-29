@@ -12,6 +12,6 @@ class SharedSettings: ObservableObject {
     @Published var squareOpacity: Double = 0.5
     @Published var textSizeMultiplier: Double = 1.0
     @Published var fontWeightIndex: Double = 4 // Defaults to .regular
-    @Published var textColor: Color = Color("Illuminating")
+    @Published var textColor: Color = Color("Indigo")
     @Published var editorText: String = ""
 }
