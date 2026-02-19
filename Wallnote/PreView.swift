@@ -13,30 +13,24 @@ struct PreView: View {
     @Environment(\.colorScheme) var colorScheme
     
     @State private var editorText: String = ""
-        @FocusState private var isTextEditorFocused: Bool
-
-//    @State private var userText: String = ""
-//    @State private var showPlaceholder: Bool = true
-//    private var placeholder: String = "Enter text here..."
+    @FocusState private var isTextEditorFocused: Bool
     
     @EnvironmentObject var sharedSettings: SharedSettings
     
-        private let fontWeights: [Font.Weight] = [
-            .ultraLight, .thin, .light, .regular, .medium,
-            .semibold, .bold, .heavy, .black
-        ]
-        
-        private var selectedFontWeight: Font.Weight {
-            let index = min(max(Int(sharedSettings.fontWeightIndex), 0), fontWeights.count - 1)
-            return fontWeights[index]
-        }
+    private let fontWeights: [Font.Weight] = [
+        .ultraLight, .thin, .light, .regular, .medium,
+        .semibold, .bold, .heavy, .black
+    ]
     
-        private let baseFontSize: CGFloat = 16
+    private var selectedFontWeight: Font.Weight {
+        let index = min(max(Int(sharedSettings.fontWeightIndex), 0), fontWeights.count - 1)
+        return fontWeights[index]
+    }
+    
+    private let baseFontSize: CGFloat = 16
     
     var body: some View {
-        ZStack {
-        NavigationView {
-            
+        NavigationStack {
             GeometryReader { geometry in
                 ZStack {
                     if let image = viewModel.selectedImage {
@@ -45,11 +39,9 @@ struct PreView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: geometry.size.width, height: geometry.size.height)
                             .clipped()
-                            
                     } else {
                         Text("No Image Selected")
                     }
-                    
                     ZStack {
                         Rectangle()
                             .foregroundColor(.black)
@@ -64,56 +56,44 @@ struct PreView: View {
                             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                     }
                     .safeAreaInset(edge: .bottom) {
-                            VStack {
-                                Text("Press the camera button to start over or edit.")
-                                    .multilineTextAlignment(.center)
-                                    .font(.caption)
-                                    .fontWeight(.bold)
-                                    .frame(width: geometry.size.width / 2, height: geometry.size.height / 2)
-//                                    .position(x: geometry.size.width * 3 / 4)
-                                buttonBar
-                            }
-                            
-                            
+                        VStack {
+                            Spacer()
+                            buttonBar
+                        }
+                        .padding(.bottom, SafeArea.bottom)
                     }
-                    
-                    
-//                    .padding(.bottom, 50)
                 }
             }
             .ignoresSafeArea()
         }
     }
-    }
     var buttonBar: some View {
-            HStack(spacing: 20) {
-                Button(action: { appState.selectedView = .editorView }) {
-                    ZStack {
-                        Circle().foregroundColor(colorScheme == .dark ? .white : .black)
-                        Image(systemName: "pencil.and.scribble")
-                            .foregroundColor(colorScheme == .dark ? .black : .white)
-                            .font(.system(size: 28)) // Adjust as necessary
-                    }
-                    .frame(width: 55, height: 55)
-                    .padding()
-                }
-                .frame(width: 55, height: 55)
-                .padding()
-                
-                Button(action: { appState.selectedView = .screenshotView }) {
-                    ZStack {
-                        Circle().foregroundColor(colorScheme == .dark ? .white : .black)
-                        Image(systemName: "photo.badge.arrow.down")
-                            .foregroundColor(colorScheme == .dark ? .black : .white)
-                            .font(.system(size: 28)) // Adjust as necessary
-                    }
-                    .frame(width: 55, height: 55)
-                    .padding()
-                }
+        HStack(spacing: 20) {
+            GlassButton(systemName: "pencil.and.scribble") {
+                appState.selectedView = .editorView
             }
-            .foregroundColor(.white)
-            .padding(.horizontal)
-            .background(Color.clear)
+            Button{
+                appState.selectedView = .screenshotView
+            } label: {
+                VStack {
+                    Text("HIDE CONTROLS")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                    
+                    Text("Use device buttons\nto take screenshot")
+                        .font(.caption2)
+                        .fontWeight(.semibold)
+                }
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 16)
+                .frame(height: 55)
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(Color("Indigo"))
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
+            .contentShape(Capsule())
         }
+    }
 }
 

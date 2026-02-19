@@ -72,13 +72,12 @@ struct ScreenshotView: View {
         }
     }
         .statusBar(hidden: true)
-        .onAppear {
-            NotificationCenter.default.addObserver(
-                forName: UIApplication.userDidTakeScreenshotNotification,
-                object: nil,
-                queue: .main) { _ in
-                    appState.navigateToFinalView()
-                }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: UIApplication.userDidTakeScreenshotNotification
+            )
+        ) { _ in
+            appState.navigateToFinalView()
         }
 
     }

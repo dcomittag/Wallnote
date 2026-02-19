@@ -15,39 +15,28 @@ struct FinalView: View {
         VStack {
             Spacer()
             VStack {
-                Text("Select the screenshot in your Photos app and use as wallpaper.")
+                Text("Your wallpaper is ready")
+                    .font(.largeTitle)
+                        .fontWeight(.black)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                
+                Text("Saved to Photos")
+                    .fontWeight(.semibold)
             }
-            .multilineTextAlignment(.center)
-            .font(.title)
-            .fontWeight(.black)
             .padding()
             Spacer()
-            VStack {
-                Text("Press the camera button to start over or edit.")
-            }
-            .multilineTextAlignment(.center)
-            .font(.caption)
-            .fontWeight(.bold)
-            .padding()
+            
+            
             Button {
                 appState.selectedView = .startView
             } label: {
-                ZStack {
-                    Circle()
-                        .stroke(.white, lineWidth: 2)
-                    Text("📸")
-                        .font(.system(size: buttonEmojiFontSize))
-                }
-                .frame(width: 55, height: 55)
-                .padding()
+                ActionSphere(imageName: "WNLogoIndigoTransparent", sphereColor: .white)
             }
-            .padding()
         }
         .foregroundColor(.white)
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("Indigo"))
-        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
     }
 }
 

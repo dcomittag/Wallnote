@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9743049E2F10EFC90000AF97 /* InformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9743049D2F10EFC90000AF97 /* InformationDetailView.swift */; };
 		974304B02F160E990000AF97 /* SettingsHeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974304AF2F160E990000AF97 /* SettingsHeadlineView.swift */; };
+		9746B32C2F3B4DA500586066 /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746B32B2F3B4DA500586066 /* GlassButton.swift */; };
+		9746B3322F3B681C00586066 /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746B3312F3B681C00586066 /* SafeArea.swift */; };
+		9746B3342F3C545500586066 /* ActionSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746B3332F3C545500586066 /* ActionSphere.swift */; };
 		97A1DC262BB6BB5E00DF9274 /* WallnoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC252BB6BB5E00DF9274 /* WallnoteApp.swift */; };
 		97A1DC282BB6BB5E00DF9274 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1DC272BB6BB5E00DF9274 /* ContentView.swift */; };
 		97A1DC2A2BB6BB5F00DF9274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A1DC292BB6BB5F00DF9274 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		9743049D2F10EFC90000AF97 /* InformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailView.swift; sourceTree = "<group>"; };
 		9743049F2F10F3900000AF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		974304AF2F160E990000AF97 /* SettingsHeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeadlineView.swift; sourceTree = "<group>"; };
+		9746B32B2F3B4DA500586066 /* GlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButton.swift; sourceTree = "<group>"; };
+		9746B3312F3B681C00586066 /* SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArea.swift; sourceTree = "<group>"; };
+		9746B3332F3C545500586066 /* ActionSphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSphere.swift; sourceTree = "<group>"; };
 		97A1DC222BB6BB5E00DF9274 /* Wallnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A1DC252BB6BB5E00DF9274 /* WallnoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallnoteApp.swift; sourceTree = "<group>"; };
 		97A1DC272BB6BB5E00DF9274 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				974304AF2F160E990000AF97 /* SettingsHeadlineView.swift */,
 				9743049D2F10EFC90000AF97 /* InformationDetailView.swift */,
 				97A1DC252BB6BB5E00DF9274 /* WallnoteApp.swift */,
+				9746B3312F3B681C00586066 /* SafeArea.swift */,
 				97A1DC6B2BB6BEEE00DF9274 /* EditorView.swift */,
 				97A1DC6D2BB6BF1A00DF9274 /* FinalView.swift */,
 				97A1DC6F2BB6BF3500DF9274 /* ScreenshotView.swift */,
@@ -146,6 +153,7 @@
 				97A1DC692BB6BE8200DF9274 /* AppState.swift */,
 				97A1DC4F2BB6BC1E00DF9274 /* Extensions.swift */,
 				97A1DC512BB6BC4600DF9274 /* WelcomeView.swift */,
+				9746B3332F3C545500586066 /* ActionSphere.swift */,
 				97A1DC552BB6BD1A00DF9274 /* WallnoteModel.swift */,
 				97A1DC572BB6BD4300DF9274 /* PhotoPicker.swift */,
 				97A1DC592BB6BD6F00DF9274 /* ImageStorage.swift */,
@@ -154,6 +162,7 @@
 				97CE7BCA2F2B48D500223681 /* AppearanceMode.swift */,
 				97A1DC5F2BB6BDC000DF9274 /* SettingsView.swift */,
 				97A1DC612BB6BDD500DF9274 /* StartView.swift */,
+				9746B32B2F3B4DA500586066 /* GlassButton.swift */,
 				97A1DC632BB6BDFA00DF9274 /* SharedSettings.swift */,
 				97A1DC652BB6BE1200DF9274 /* StylingView.swift */,
 				97A1DC672BB6BE2600DF9274 /* PreView.swift */,
@@ -320,7 +329,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A1DC642BB6BDFA00DF9274 /* SharedSettings.swift in Sources */,
+				9746B3322F3B681C00586066 /* SafeArea.swift in Sources */,
 				97A1DC682BB6BE2600DF9274 /* PreView.swift in Sources */,
+				9746B32C2F3B4DA500586066 /* GlassButton.swift in Sources */,
 				97A1DC662BB6BE1200DF9274 /* StylingView.swift in Sources */,
 				97A1DC6E2BB6BF1A00DF9274 /* FinalView.swift in Sources */,
 				97A1DC582BB6BD4300DF9274 /* PhotoPicker.swift in Sources */,
@@ -333,6 +344,7 @@
 				97A1DC262BB6BB5E00DF9274 /* WallnoteApp.swift in Sources */,
 				97A1DC5C2BB6BD8B00DF9274 /* MoreView.swift in Sources */,
 				97A1DC6A2BB6BE8200DF9274 /* AppState.swift in Sources */,
+				9746B3342F3C545500586066 /* ActionSphere.swift in Sources */,
 				97A1DC5A2BB6BD6F00DF9274 /* ImageStorage.swift in Sources */,
 				97A1DC522BB6BC4600DF9274 /* WelcomeView.swift in Sources */,
 				97CE7BCB2F2B48D500223681 /* AppearanceMode.swift in Sources */,

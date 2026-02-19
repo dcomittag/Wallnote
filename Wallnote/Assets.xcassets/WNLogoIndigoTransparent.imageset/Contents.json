@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Mijas.jpeg",
+      "filename" : "WNLogoIndigoTransparent.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "WNLogoIndigoTransparent@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "WNLogoIndigoTransparent@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

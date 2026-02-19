@@ -68,6 +68,7 @@ struct EditorView: View {
                         Button("Done") {
                             isTextEditorFocused = false // Dismisses the keyboard
                         }
+                        .fontWeight(.semibold)
                     }
                 }
             }
@@ -81,27 +82,11 @@ struct EditorView: View {
     
     var buttonBar: some View {
         HStack(spacing: 20) {
-            Button(action: { appState.selectedView = .stylingView }) {
-                
-                ZStack {
-                    Circle().foregroundColor(colorScheme == .dark ? .white : .black)
-                    Image(systemName: "slider.horizontal.3")
-                        .foregroundColor(colorScheme == .dark ? .black : .white)
-                        .font(.system(size: 28))
-                }
-                .frame(width: 55, height: 55)
-                .padding()
+            GlassButton(systemName: "slider.horizontal.3") {
+                appState.selectedView = .stylingView
             }
-            
-            Button(action: { appState.selectedView = .preView }) {
-                ZStack {
-                    Circle().foregroundColor(colorScheme == .dark ? .white : .black)
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(colorScheme == .dark ? .black : .white)
-                        .font(.system(size: 28))
-                }
-                .frame(width: 55, height: 55)
-                .padding()
+            GlassButton(systemName: "magnifyingglass") {
+                appState.selectedView = .preView
             }
         }
     }

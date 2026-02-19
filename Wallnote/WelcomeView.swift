@@ -9,55 +9,37 @@ import SwiftUI
 
 struct WelcomeView: View {
     
-    @Binding var isFirstLaunch: Bool
+    let welcomed: () -> Void
     
     var body: some View {
-        VStack {
-            Spacer()
-            VStack {
-                Text("Welcome to")
-                Text("Wallnote")
-                    .foregroundStyle(Color("Indigo"))
-            }
-            .font(.largeTitle)
-            .fontWeight(.black)
-            .padding()
-             Spacer()
             
             VStack {
-                InformationDetailView(title: "Pick a photo.", message: "Choose any picture from your library.")
-                InformationDetailView(title: "Write & style.", message: "Add a note and customize it your way.")
-                InformationDetailView(title: "Set as wallpaper.", message: "Keep your Wallnote in view and never miss a beat.")
-            }
-            .font(.title2)
-            .padding()
-            
-            Spacer()
-
-            Button {
-                isFirstLaunch = false
-            } label: {
-                ZStack {
-                    Circle()
-                        .stroke(Color("Indigo"), lineWidth: 2)
-                    Text("📸")
-                        .font(.system(size: buttonEmojiFontSize))
+                Spacer()
+                
+                VStack(spacing: 6) {
+                    Text("Wallnote")
+                        .foregroundStyle(Color("Indigo"))
+                        .font(.system(size: 40, weight: .black))
+                    Text("Notes that stay with you")
+                        .font(.title3)
+                        .fontWeight(.semibold)
                 }
-                .frame(width: 55, height: 55)
                 .padding()
+                Spacer()
+                    Button {
+                        welcomed()
+                    } label: {
+                        ActionSphere(imageName: "WNLogoWhiteTransparent", sphereColor: Color("Indigo"))
+                    }
             }
-            .padding()
+            .foregroundStyle(.black)
+            .background(.white)
+            .ignoresSafeArea()
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .foregroundStyle(.black)
-        .background(.white)
-        .edgesIgnoringSafeArea(.all)
-    }
 }
 
 let buttonEmojiFontSize: CGFloat = 36
 
 #Preview {
-    WelcomeView(isFirstLaunch: .constant(true))
+    WelcomeView(welcomed: {})
 }

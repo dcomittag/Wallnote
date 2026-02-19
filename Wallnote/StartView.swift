@@ -40,41 +40,20 @@ struct StartView: View {
                     //                // Buttons positioned at the bottom
                     VStack {
                         HStack(spacing: 20) {
-                            // Button to pick a new photo
-                            Button(action: { isPickerPresented = true }) {
-                                ZStack {
-                                    Circle().stroke(colorScheme == .dark ? .white : .black, lineWidth: 2)
-                                    Image(systemName: "photo.badge.plus")
-                                        .foregroundColor(colorScheme == .dark ? .white : .black)
-                                        .font(.system(size: 28))
-                                }
-                                .frame(width: 55, height: 55)
-                                .padding()
+                            GlassButton(systemName: "photo.badge.plus") {
+                                isPickerPresented = true
                             }
-                            
                             // Button to reuse the selected image (if available)
                             if viewModel.selectedImage != nil {
-                                Button(action: {
+                                GlassButton(systemName: "photo.badge.checkmark") {
                                     viewModel.saveSelectedImage()
                                     appState.selectedView = .stylingView
-                                }) {
-                                    ZStack {
-                                        Circle().stroke(colorScheme == .dark ? .white : .black, lineWidth: 2)
-                                        Image(systemName: "photo.badge.checkmark")
-                                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                                            .font(.system(size: 28))
-                                    }
-                                    .frame(width: 55, height: 55)
-                                    .padding()
                                 }
                             }
                         }
-                        .padding(.bottom, 20)
                     }
-                    .padding(.bottom, 20)
+                    .padding(.bottom, SafeArea.bottom)
                 }
-                
-                
             }
             .ignoresSafeArea()
             

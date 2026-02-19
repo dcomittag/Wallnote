@@ -15,29 +15,29 @@ struct MoreView: View {
     
     var body: some View {
         VStack {
-            Button {
-                shareApp()
-            } label: {
-                Text("♥️ Share Wallnote")
-                    .padding(.vertical, 8)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .contentShape(Rectangle())
-            }
-            .contextMenu {
-                Button(action: copyLink) {
-                    Label("Copy Link", systemImage: "doc.on.doc")
-                }
-            }
-            Divider()
-            Button {
-                rateApp()
-            } label: {
-                Text("⭐️ Rate Wallnote")
-                    .padding(.vertical, 8)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .contentShape(Rectangle())
-            }
-            Divider()
+//            Button {
+//                shareApp()
+//            } label: {
+//                Text("♥️ Share Wallnote")
+//                    .padding(.vertical, 8)
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .contentShape(Rectangle())
+//            }
+//            .contextMenu {
+//                Button(action: copyLink) {
+//                    Label("Copy Link", systemImage: "doc.on.doc")
+//                }
+//            }
+//            Divider()
+//            Button {
+//                rateApp()
+//            } label: {
+//                Text("⭐️ Rate Wallnote")
+//                    .padding(.vertical, 8)
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .contentShape(Rectangle())
+//            }
+//            Divider()
             Button {
                 composeEmail()
             } label: {

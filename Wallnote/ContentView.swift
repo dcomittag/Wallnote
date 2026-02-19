@@ -15,7 +15,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if isFirstLaunch {
-                WelcomeView(isFirstLaunch: $isFirstLaunch)
+                WelcomeView {
+                    withAnimation(.easeInOut(duration: 0.25)) {
+                        isFirstLaunch = false
+                    }
+                }
+                .transition(.opacity)
             } else {
                 switch appState.selectedView {
                 case .startView:
