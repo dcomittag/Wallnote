@@ -44,7 +44,7 @@ struct ScreenshotView: View {
                         Image(uiImage: image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                            .frame(width: geometry.size.width, height: geometry.size.height)
                             .clipped()
                             .edgesIgnoringSafeArea(.all)
                     } else {
