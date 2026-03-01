@@ -36,7 +36,7 @@ struct ScreenshotView: View {
     
     var body: some View {
         ZStack {
-        NavigationView {
+        NavigationStack {
             
             GeometryReader { geometry in
                 ZStack {
@@ -61,7 +61,10 @@ struct ScreenshotView: View {
                         Text(sharedSettings.editorText)
                             .font(.system(size: baseFontSize * sharedSettings.textSizeMultiplier, weight: selectedFontWeight))
                             .foregroundColor(sharedSettings.textColor)
-                            .frame(width: geometry.size.width-40, height: geometry.size.width-40) // Use the full width for the TextEditor
+                            .frame(
+                                width: geometry.size.width - 40,
+                                height: geometry.size.width - 40
+                            ) // Use the full width for the TextEditor
                             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                     }
                     
@@ -69,6 +72,7 @@ struct ScreenshotView: View {
                     
                 }
             }
+            .ignoresSafeArea()
         }
     }
         .statusBar(hidden: true)
