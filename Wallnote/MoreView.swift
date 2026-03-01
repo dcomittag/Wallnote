@@ -9,35 +9,35 @@ import SwiftUI
 import UIKit
 
 struct MoreView: View {
-    let appStoreURL = URL(string: "https://apps.apple.com//app/idxxx")!
+    let appStoreURL = URL(string: "https://apps.apple.com//app/id6480289629")!
     let websiteURL = URL(string: "https://www.nayaca.com")!
     let email = "hello@nayaca.com"
     
     var body: some View {
         VStack {
-//            Button {
-//                shareApp()
-//            } label: {
-//                Text("♥️ Share Wallnote")
-//                    .padding(.vertical, 8)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .contentShape(Rectangle())
-//            }
-//            .contextMenu {
-//                Button(action: copyLink) {
-//                    Label("Copy Link", systemImage: "doc.on.doc")
-//                }
-//            }
-//            Divider()
-//            Button {
-//                rateApp()
-//            } label: {
-//                Text("⭐️ Rate Wallnote")
-//                    .padding(.vertical, 8)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .contentShape(Rectangle())
-//            }
-//            Divider()
+            Button {
+                shareApp()
+            } label: {
+                Text("♥️ Share Wallnote")
+                    .padding(.vertical, 8)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+            }
+            .contextMenu {
+                Button(action: copyLink) {
+                    Label("Copy Link", systemImage: "doc.on.doc")
+                }
+            }
+            Divider()
+            Button {
+                rateApp()
+            } label: {
+                Text("⭐️ Rate Wallnote")
+                    .padding(.vertical, 8)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+            }
+            Divider()
             Button {
                 composeEmail()
             } label: {
